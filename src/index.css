@@ -1,13 +1,798 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: honeydew;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin: 20px 0px;
 }
+
+.image {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightseagreen;
+    margin: 15px;
+    padding: 5px;
+}
+
+.navbar img {
+    margin-top: 25px;
+}
+
+.navbar p {
+    font-size: 8px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    margin: 0px 50px
+}
+
+.hamberger {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width:812px) {
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamberger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-size: 25px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        background-color: honeydew;
+        padding: 10px;
+        animation: menu 0.3s linear;
+        height: 170px;
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+
+    .clear {
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-size: 25px;
+    }
+
+    .secondcomp{
+        position: relative;
+        top: 120px;
+    }
+}
+
+
+.middle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0px;
+}
+
+.image1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-color: lightseagreen;
+}
+.s1{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.s1 h1 {
+    font-size: 60px;
+    color: lightseagreen;
+}
+
+.s1 p {
+    width: 395px;
+    color: lightseagreen;
+}
+
+.middle button {
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin: auto;
+    width: 100px;
+    padding: 3px;
+}
+
+.s2 {
+    background-color: lightseagreen;
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px;
+}
+
+.s2>div:first-child {
+    width: 365px;
+    text-align: center;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.s2 {
+    color: white;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* color: white; */
+}
+
+.card img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.card h1,
+p {
+    padding: 10px 0px;
+}
+
+.last {
+    width: 375px;
+    text-align: center;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.card {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+}
+
+.cards1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    color: lightseagreen;
+}
+
+.card1 {
+    width: 220px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* color: white; */
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cards1 button {
+    padding: 8px;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 5px;
+}
+
+.s3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.s3 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.s3 p {
+    margin: auto;
+    width: 300px;
+    font-size: 15PX;
+}
+
+.s4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: lightseagreen;
+    width: 100%;
+    height: 50%;
+    padding: 50px 10px;
+}
+
+.s4 p {
+    width: 340px;
+    margin: auto;
+}
+
+.s4 input {
+    width: 310px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.s4 button {
+    width: 85px;
+    height: 31px;
+    border-radius: 20px;
+    border: none;
+    color:lightseagreen;
+}
+
+.end {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: lightseagreen;
+    margin-top: 80px;
+}
+
+.end a {
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.last1 {
+    width: 27%
+}
+
+.last2 {
+    width: 20%;
+}
+
+.last2 {
+    width: 15%;
+}
+
+.icons a {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    color: lightseagreen;
+    column-gap: 10px;
+    width: 20%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.icons span {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+}
+
+.icons i {
+    color: lightseagreen;
+}
+
+/* @media only screen and (min-device-width:375px) {
+    .navbar {
+        justify-content: flex-start;
+        width: 375px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamberger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-size: 25px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 30px;
+        top: 55px;
+        background-color: lightgray;
+        padding: 10px;
+        animation: menu 0.3s linear;
+        height: 110px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .middle {
+        display: block;
+
+    }
+
+    .middle img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .s1 {
+        font-size: 12px;
+    }
+
+    .s1 h1{
+        font-size: 40px;
+    }
+
+    .s1 p {
+        width: 200px;
+        margin: auto;
+    }
+
+    .cards {
+        display: block;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .card img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .text {
+        font-size: 12px;
+        text-align: center;
+        margin: auto;
+        text-align: center;
+    }
+
+    .text p {
+        width: 200px;
+        margin: auto;
+    }
+
+    .last {
+        font-size: 12px;
+    }
+
+    .last p {
+        width: 200px;
+        margin: auto;
+    }
+
+    .text1 {
+        font-size: 12px;
+    }
+
+    .text1 p {
+        width: 200px;
+        margin: auto;
+    }
+
+    .cards1 {
+        row-gap: 10px;
+    }
+
+    .s3 img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        align-items: center;
+        margin: auto;
+    }
+    .s4 button {
+        width: 100px;
+        height: 31px;
+        border-radius: 20px;
+        border: none;
+        color: lightseagreen;
+        position: absolute;
+        right: 10px;
+    }
+
+    .end {
+        display: flex;
+    }
+
+    .last1 {
+        width: 100px;
+    }
+
+    .last2 {
+        width: 100px;
+    }
+
+    .last3 {
+        width: 80px;
+    }
+
+    .icons {
+        width: 50px;
+    }
+
+    .icons a {
+        margin: auto;
+        width: 100px;
+    }
+
+    .icons h3 {
+        text-align: center;
+        width: 60px;
+    }
+} */
+
+/* @media only screen and (min-device-width:414px) {
+    .hamberger {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        left: 10px;
+        font-size: 10px;
+        width: 414px;
+        padding: 0px 20px;
+    }
+
+    .links a {
+        margin: 0px 10px;
+    }
+
+    .middle {
+        display: flex;
+    }
+
+    .middle h1 {
+        font-size: 20px;
+    }
+
+    .middle p {
+        width: 210px;
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        width: 390px;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .card p {
+        width: 200px;
+        margin: auto;
+    }
+
+    .last {
+        width: 200px;
+        margin: auto;
+    }
+
+    .last h1 {
+        width: 200px;
+        margin: auto;
+        color: lightseagreen;
+    }
+
+    .last p {
+        font-size: 12px;
+        width: 195px;
+        margin: auto;
+        color: lightseagreen;
+    }
+
+    .s2>div:first-child {
+        width: 395px;
+        text-align: center;
+        margin: auto;
+        padding: 50px 0px;
+    }
+
+    .text1 p {
+        font-size: 19px;
+    }
+
+    .cards1 {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        width: 390px;
+        column-gap: 20px;
+    }
+
+    .card1 {
+        height: 310px;
+    }
+
+    .s3 p {
+        margin: auto;
+        width: 414px;
+        font-size: 25PX;
+    }
+
+    .s3 h3 {
+        font-size: 20px;
+    }
+
+    .s4 h1 {
+        width: 395px;
+        color: white;
+    }
+
+    .s4 p {
+        width: 395px;
+        margin: auto;
+        color: white;
+    }
+
+    .s4 input {
+        width: 350px;
+        height: 30px;
+        border-radius: 15px;
+    }
+
+    .s4 button {
+        width: 80px;
+        height: 31px;
+        border-radius: 20px;
+        position: absolute;
+        right: 30px;
+    }
+
+    .end {
+        display: flex;
+        justify-content: space-evenly;
+        width: 95%;
+        color: lightseagreen;
+        margin: 80px 10px;
+    }
+
+    .last1 {
+        width: 130px;
+    }
+
+    .last2 {
+        width: 150px;
+    }
+
+    .last3 {
+        width: 160px;
+    }
+
+    .icons {
+        width: 100px;
+    }
+} */
+
+@media only screen and (min-width:360px) and (max-width:812px) {
+    .middle{
+        flex-direction: column;
+    }
+    .s1 h1{
+        font-size: 55px;
+    }
+  
+    .cards{
+        flex-wrap: wrap;
+    }
+    .card{
+        margin-bottom: 50px;
+    }
+   
+    .card1{
+        margin-bottom: 10px;
+    }
+   .s4 input{
+    width: 222px;
+   }
+    .last1 {
+        font-size: 12px;
+    }
+
+    .last2 {
+        font-size: 12px;
+    }
+
+    .last3 {
+        font-size: 12px;
+    }
+
+    .icons {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:280px) {
+    .middle{
+        display: block;
+    }
+    .image1 img{
+        width: 120px;
+        height: 120px;
+    }
+    .s1 h1{
+        font-size: 30px;
+    }
+    .s1 p{
+        font-size: 10px;
+        width: 250px;
+        margin: auto;
+    }
+    .text h1{
+        font-size: 30px;
+        margin: auto;
+    }
+    .text p{
+        font-size: 10px;
+        width: 250px;
+        margin: auto;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .card img{
+        width: 120px;
+        height: 120px;
+        margin: auto;
+    }
+    .last h1{
+        font-size: 30px;
+        margin: auto; 
+    }
+    .last p{
+        font-size: 10px;
+        width: 250px;
+        margin: auto;
+    }
+    .s2>div:first-child {
+        width: 260px;
+        text-align: center;
+        margin: auto;
+        padding: 50px 0px;
+    }
+    .last {
+        width: 265px;
+        text-align: center;
+        margin: auto;
+        padding: 50px 0px;
+    }
+    .text1 h1{
+        font-size: 30px;
+        margin: auto
+    }
+    .text1 p{
+        font-size: 10px;
+        width: 250px;
+        margin: auto;
+    }
+    .card1{
+        margin-bottom: 10px;
+    }
+    .s3 img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+    .s4 h1{
+        font-size: 30px;
+        margin: auto
+    }
+    .s4 p{
+        font-size: 10px;
+        width: 250px;
+        margin: auto;
+    }
+    .s4 input {
+        width: 175px;
+        height: 30px;
+        border-radius: 15px;
+        border: none;
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .s4 button {
+        width: 80px;
+        height: 31px;
+        border-radius: 20px;
+        border: none;
+        color: lightseagreen;
+    }
+    .end{
+        display: block;
+        width: 300px;
+        height: 300px;
+    }
+    .last1 {
+        width: 50%;
+        margin: auto;
+    }
+    .last2 {
+        width: 50%;
+        margin: auto;
+    }
+    .last3 {
+        width: 50%;
+        margin: auto;
+    }
+    .icons{
+        width: 50%;
+        margin: auto;
+    }
+}
+
+
